@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kalam:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: karltown;
+  src: url(/assets/images/products_page/Karltown.ttf);
+}
+
+@font-face {
+  font-family: harabara;
+  src: url(/assets/images/products_page/Harabara.ttf);
+}
+
+body {
+
+  font-family: "Kalam", cursive;
+  background-color: #FAF3E6;
+  overflow-x: hidden;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background: white;
+}
+
+.kalam {
+  font-family: "Kalam", cursive;
+}
+
+.jost {
+  font-family: "Jost", sans-serif;
+}
+
+header {
+  background-color: #F26B01;
+  position: relative;
+}
+
+header ul li a {
+  font-size: 18px;
+  padding: 0 20px !important;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255) !important;
+  font-family: "Jost", sans-serif;
+}
+
+.navbar-brand {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-40%);
+  z-index: 2;
+}
+
+figure {
+  margin-bottom: 0 !important;
+}
+
+.banner .oil-wave {
+  position: absolute;
+  bottom: -60%;
+  z-index: 99;
+}
+
+@media(max-width:768px) {
+  .navbar-brand {
+    left: 80%;
+    transform: translateX(-40%);
+    z-index: 2;
+  }
+
+  .pipli-banner .owl-dots {
+    display: none;
+  }
+
+  .bfoot-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.pipli-banner {
+  width: 100%;
+}
+
+.pipli-banner .owl-dots {
+  position: absolute;
+  rotate: 90deg;
+  top: 45%;
+  right: -2%;
+  transform: translateY(-50%);
+}
+
+.pipli-banner .owl-dots span {
+  width: 30px !important;
+  height: 2px !important;
+
+}
+
+.pipli-products {
+  /* height: 100vh; */
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+.pipli-products .row {
+  padding: 100px 0;
+}
+
+.pipli-products .item {
+  display: flex;
+  justify-content: center;
+}
+
+.pipli-products .owl-carousel img {
+  width: 38% !important;
+}
+
+.ruler-left {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: #FCF6DF;
+  transform: skew(-4deg, -20deg);
+  top: 150px;
+  margin-bottom: 250px;
+  box-shadow: -5px 5px 5px darkgray;
+}
+
+.ruler-right {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: #FCF6DF;
+  transform: skew(-4deg, -20deg);
+  top: 0px;
+  margin-left: auto;
+  margin-right: -5%;
+  box-shadow: 5px 5px 5px darkgray;
+}
+
+.flower {
+  width: 10% !important;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.love-left-arrow {
+  position: absolute;
+  bottom: 7%;
+  left: 30%;
+  transform: translateX(-50%) rotate(-16deg);
+  z-index: 4;
+  transition: all 0.5s ease-in-out;
+}
+
+.love-left-arrow:hover {
+  transform: translateX(-50%) rotate(-20deg);
+  z-index: 4;
+}
+
+.love-right-arrow {
+  position: absolute;
+  top: 7%;
+  right: 25%;
+  transform: translateX(50%) rotate(-16deg);
+  z-index: 4;
+  transition: all 0.5s ease-in-out;
+}
+
+.love-right-arrow:hover {
+  transform: translateX(50%) rotate(-20deg);
+}
+
+.love-left-arrow img {
+  width: 40%;
+  cursor: pointer;
+}
+
+.love-right-arrow img {
+  width: 40%;
+  cursor: pointer;
+}
+
+.love-left-arrow img:first-child {
+  transform: rotate(7deg);
+}
+
+.love-right-arrow img:last-child {
+  transform: rotate(187deg);
+}
+
+
+
+
+
+.love-left-arrow img:last-child {
+  transform: rotate(-73deg) translate(-6%, 0%);
+}
+
+.love-right-arrow img:first-child {
+  transform: rotate(100deg) translate(0%, 0%);
+}
+
+
+
+.ripple {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+  animation: ripple-animation 3s linear infinite;
+}
+
+
+
+.ripple-left {
+  transform: translate(-50%, -15%);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 80%;
+  height: 70%;
+}
+
+.ripple-right {
+  transform: translate(-50%, -15%);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 70%;
+  height: 90%;
+}
+
+.ripple:nth-child(1) {
+  animation-delay: 0.1s;
+  /* Delay for second ripple */
+}
+
+.ripple:nth-child(2) {
+  animation-delay: 0.3s;
+  /* Delay for third ripple */
+}
+
+.ripple:nth-child(3) {
+  animation-delay: 0.6s;
+  /* Delay for second ripple */
+}
+
+.ripple:nth-child(4) {
+  animation-delay: 0.9s;
+  /* Delay for third ripple */
+}
+
+.ripple:nth-child(5) {
+  animation-delay: 1.2s;
+  /* Delay for third ripple */
+}
+
+.ripple:nth-child(6) {
+  animation-delay: 1s;
+  /* Delay for third ripple */
+}
+
+
+.oil-drop {
+  width: 35%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  top: 35px;
+}
+
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+    border: 20px dotted rgba(0, 0, 0, 0.192);
+  }
+
+  25% {
+    transform: scale(0.2);
+    opacity: 0.6;
+    border: 20px dotted rgba(0, 0, 0, 0.192);
+  }
+
+  50% {
+    transform: scale(0.4);
+    opacity: 0.4;
+    border: 20px dotted rgba(0, 0, 0, 0.192);
+  }
+
+  75% {
+    transform: scale(0.6);
+    opacity: 0.2;
+    border: 15px dotted rgba(0, 0, 0, 0.192);
+  }
+
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+    border: 10px dotted rgba(0, 0, 0, 0.192);
+  }
+}
+
+.right-product-slider figcaption {
+  position: absolute;
+  top: 60%;
+  left: 8%;
+  color: #F26B01;
+  font-weight: bolder;
+  font-size: 2vw;
+}
+
+.left-product-slider figcaption {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  color: #F26B01;
+  font-weight: bolder;
+  font-size: 2vw;
+}
+
+.oil-sources {
+  background-color: #FFF6D1;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.oil-sources .item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 40px;
+}
+
+.oil-crops {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid green;
+}
+
+.oil-crops img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  border: 1px solid yellow;
+}
+
+.odd {
+  background: linear-gradient(red, rgb(18, 18, 18)) !important;
+}
+
+.even {
+  background: linear-gradient(rgb(9, 210, 2), green);
+}
+
+.about-pipli {
+  padding: 40px 0;
+  background-color: white;
+}
+
+.about-pipli h1 {
+  color: #F26B01;
+  font-size: 6vw;
+}
+
+.about-pipli h2 {
+  color: #F26B01;
+  font-size: 4vw;
+}
+
+.step-into-house {
+  padding: 40px 0;
+  background-color: #F26B01;
+}
+
+.step-into-house h3 {
+  color: yellow;
+}
+
+.video-house {
+  height: 230px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 10px;
+
+}
+
+.video-house .video {
+  background-color: #FBFFA2;
+
+}
+
+.enquiry-form {
+  background-color: #EE5A2B;
+  padding: 40px 0;
+  border-top: 2px solid white;
+}
+
+.submit-btn {
+  background-color: yellow;
+  color: black;
+  text-wrap: nowrap;
+  width: 100%;
+}
+
+.oil-wave video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.top-foot {
+  height: 500px;
+}
+
+.top-foot video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.top-foot .moulik-logo {
+  width: 20%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-foot {
+  background-color: #29A7DF;
+}
+
+.bottom-foot ul li a {
+  text-wrap: nowrap;
+}
+
+.product-slider {
+  height: 100vh;
+  width: 100%;
+  background: url(/assets/images/products_page/BG-01.webp);
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.frame img {
+  filter: drop-shadow(0 0 10px rgb(152, 151, 151));
+}
+
+.product-frame .item img {
+  width: 45%;
+}
+
+.product-frame {
+  position: absolute;
+  left: 63%;
+  top: 25%;
+  transform: translateY(-15%);
+}
+
+.product-next-prev-btn {
+  background: linear-gradient(to left, #fcf76e, white);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.product-next-prev-btn img {
+  width: 150px;
+  cursor: pointer;
+}
+
+.product-frame-slider .item h2 {
+  font-family: karltown;
+  font-size: 5vw;
+  line-height: 60px;
+  padding-top: 20px;
+}
+
+.product-frame-slider .item h2 span {
+  font-family: harabara;
+  letter-spacing: 4px;
+}
+
+.product-frame-slider .item p {
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+}
+
+.product-frame-slider .item h2:nth-child(1) {
+  color: #94161a;
+}
+
+
+
+
+
+.pipli-with-product {
+  width: 150px;
+  position: absolute;
+  top: 60%;
+  right: 35%;
+  transform: translate(0%, 0%);
+}
