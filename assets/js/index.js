@@ -56,6 +56,9 @@ $(".product-frame-slider.owl-carousel").owlCarousel({
   nav: false,
   dots: false,
   mouseDrag: false,
+  touchDrag:false,
+  pullDrag: false,
+  freeDrag: false,
   smartSpeed: 450,
   items: 1,
 });
