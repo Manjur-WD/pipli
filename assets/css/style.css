@@ -334,8 +334,7 @@ figure {
 
 .oil-sources {
   background-color: #FFF6D1;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid rgb(146, 146, 146);
 }
 
 .oil-sources .item {
@@ -353,6 +352,11 @@ figure {
   overflow: hidden;
   padding: 10px;
   border: 1px solid green;
+  transition: all 0.5s ease;
+}
+
+.oil-crops:hover{
+  transform: rotate(-45deg);
 }
 
 .oil-crops img {
@@ -372,20 +376,7 @@ figure {
   background: linear-gradient(rgb(9, 210, 2), green);
 }
 
-.about-pipli {
-  padding: 40px 0;
-  background-color: white;
-}
 
-.about-pipli h1 {
-  color: #F26B01;
-  font-size: 6vw;
-}
-
-.about-pipli h2 {
-  color: #F26B01;
-  font-size: 4vw;
-}
 
 .step-into-house {
   padding: 40px 0;
@@ -467,7 +458,7 @@ figure {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-18%, -50%);
+  transform: translate(-26.5%, -69%);
 }
 
 .frame img {
@@ -476,7 +467,8 @@ figure {
 
 
 .product-frame-slider .item img {
-  width: 200px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 
@@ -517,6 +509,7 @@ figure {
 .social-icons{
   position: fixed;
   top: 50%;
+  transform: translateY(-50%);
   left: 30px;
   z-index: 99;
 }
@@ -533,11 +526,12 @@ figure {
 
 .social-icons i{
   background-color: white;
-  padding: 10px 10px;
+  padding: 5px;
   margin-bottom: 10px;
   box-shadow: 0 0 5px;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
+  font-size: 22px;
 }
 
 
@@ -547,8 +541,8 @@ figure {
 .pipli-with-product {
   width: 150px;
   position: absolute;
-  bottom: 25px;
-  left: 25px;
+  bottom: 0;
+  left: 0;
   transform: translate(0%, 0%);
 }
 
@@ -571,4 +565,35 @@ figure {
     line-height: 35px;
     padding-top: 20px;
   }
+}
+
+.about-page{
+  min-height: 100vh;
+  width: 100%;
+  background: url(../images/about_page/About\ Us\ bg.jpg) no-repeat center/cover;
+}
+
+.about-page h1{
+  background: linear-gradient(to right,blue,aqua);
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  color: white;
+}
+
+.about-right img{
+  width: 70%;
+}
+
+.about-right h5{
+  font-size: 4vw;
+  margin-top: -50px;
+  color: rgb(33, 33, 33);
+}
+
+.about-right h6{
+  font-size: 2vw;
+  color: rgb(33, 33, 33);
 }
