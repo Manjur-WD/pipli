@@ -355,7 +355,7 @@ figure {
   transition: all 0.5s ease;
 }
 
-.oil-crops:hover{
+.oil-crops:hover {
   transform: rotate(-45deg);
 }
 
@@ -506,7 +506,7 @@ figure {
   color: #94161a;
 }
 
-.social-icons{
+.social-icons {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
@@ -514,17 +514,17 @@ figure {
   z-index: 99;
 }
 
-.social-icons a{
+.social-icons a {
   text-decoration: none;
   margin-bottom: 20px;
   transition: all 0.3s ease-in-out;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
   scale: 1.2;
 }
 
-.social-icons i{
+.social-icons i {
   background-color: white;
   padding: 5px;
   margin-bottom: 10px;
@@ -554,9 +554,9 @@ figure {
 
   .pipli-with-product {
     position: absolute;
-        bottom: 0;
-        left: 0;
-        transform: translate(0%, 0%);
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, 0%);
   }
 
   .product-frame-slider .item h2 {
@@ -567,14 +567,14 @@ figure {
   }
 }
 
-.about-page{
+.about-page {
   min-height: 100vh;
   width: 100%;
   background: url(../images/about_page/About\ Us\ bg.jpg) no-repeat center/cover;
 }
 
-.about-page h1{
-  background: linear-gradient(to right,blue,aqua);
+.about-page h1 {
+  background: linear-gradient(to right, blue, aqua);
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
@@ -583,17 +583,120 @@ figure {
   color: white;
 }
 
-.about-right img{
+.about-right img {
   width: 70%;
 }
 
-.about-right h5{
+.about-right h5 {
   font-size: 4vw;
   margin-top: -50px;
   color: rgb(33, 33, 33);
 }
 
-.about-right h6{
+.about-right h6 {
   font-size: 2vw;
   color: rgb(33, 33, 33);
+}
+
+
+.contact-section p::before {
+  content: "";
+  height: 3px;
+  width: 60%;
+  background-color: black;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  left: 20%;
+}
+
+.contact-form {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translateX(-20%);
+}
+
+.contact-form h5 {
+  margin-top: -20px;
+}
+
+.contact-form a {
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  color: black;
+  border-radius: 50px;
+}
+
+@media(max-width: 600px) {
+  .contact-form {
+    position: initial;
+    width: 100% !important;
+  }
+}
+
+.join-us {
+  background: url(../images/join_us/JOIN\ US-01.png) center/cover no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.action-btn {
+  display: block;
+  text-decoration: none;
+  background-color: black;
+  color: #f2c201;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 40px;
+}
+
+.action-btn:hover {
+  background-color: #F26B01;
+  color: black;
+}
+
+.join-us h4 {
+  color: #f2c201;
+  font-weight: bolder;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgb(199, 196, 196);
+}
+
+.action-btn::before {
+  content: "";
+  background-color: #EE5A2B;
+  display: inline-block;
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.arrow-down {
+  animation: slideDown 1s  forwards infinite;
+}
+
+@keyframes slideDown {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
 }
