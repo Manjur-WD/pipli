@@ -458,7 +458,7 @@ figure {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-26.5%, -69%);
+  transform: translate(-26.5%, -53%);
 }
 
 .frame img {
@@ -466,7 +466,7 @@ figure {
 }
 
 
-.product-frame-slider .item img {
+.product-frame-slider .item .product-banner-info {
   width: 300px;
   border-radius: 10px;
 }
@@ -544,6 +544,7 @@ figure {
   bottom: 0;
   left: 0;
   transform: translate(0%, 0%);
+  z-index: 1;
 }
 
 @media(max-width: 768px) {
