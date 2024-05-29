@@ -687,7 +687,7 @@ figure {
 }
 
 .arrow-down {
-  width: 30px;
+  width: 35px;
   animation: slideDown 1s  forwards infinite;
 }
 
