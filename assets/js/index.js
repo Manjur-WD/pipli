@@ -149,3 +149,58 @@ setTimeout(() => {
 
 
 $(".top-foot video").play();
+
+
+  // Function to fetch JSON data remotely
+  async function fetchJSON() {
+    try {
+      const response = await fetch('product-and-item.json');
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error fetching JSON:', error);
+    }
+  }
+
+  // Function to populate the first dropdown with product names
+  async function populateProducts() {
+    const data = await fetchJSON();
+    const select = document.getElementById("product");
+    data.products.forEach(function(product) {
+      if (product.names) {
+        product.names.forEach(function(name) {
+          var option = document.createElement("option");
+          option.text = name;
+          select.add(option);
+        });
+      }
+    });
+  }
+
+  // Function to update the second dropdown based on the selected product
+  async function updateItems() {
+    const data = await fetchJSON();
+    const productSelect = document.getElementById("product");
+    const itemSelect = document.getElementById("items");
+    const selectedProduct = productSelect.value;
+    
+    // Clear existing options
+    itemSelect.innerHTML = '<option value="">-- Select an item --</option>';
+
+    // Find the selected product and populate its items
+    data.products.forEach(function(product) {
+      if (product[selectedProduct]) {
+        product[selectedProduct].forEach(function(item) {
+          var option = document.createElement("option");
+          option.text = item;
+          itemSelect.add(option);
+        });
+      }
+    });
+  }
+
+  // Populate the first dropdown when the page loads
+  window.onload = function() {
+    populateProducts();
+  };
+
