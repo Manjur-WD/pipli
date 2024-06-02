@@ -1,14 +1,6 @@
 {
     "products": [
         {
-            "names": [
-                "mustard oil",
-                "soyabean oil",
-                "rice bran oil",
-                "palm oil"
-            ]
-        },
-        {
             "mustard": [
                 "POUCH 1 L",
                 "POUCH 500 ml",
@@ -48,7 +40,7 @@
             ]
         },
         {
-            "rice-bran": [
+            "palm": [
                 "POUCH 1 L",
                 "TIN 15 Kg"
             ]

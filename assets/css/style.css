@@ -699,6 +699,39 @@ figure {
   scale: 1.2;
 }
 
+.modal.show .modal-dialog{
+  max-width: 80%;
+}
+
+.modal-content{
+  background: url(../images/join_us/EXISTING\ DISTRIBUTOR.jpg) no-repeat center/cover;
+  width: 100%;
+}
+
+.existing-distributor-form{
+  background-color: rgba(255, 255, 255, 0.487);
+}
+
+.distributor-btn{
+  background-color: #f1b016;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 5px 15px;
+  border: 5px solid white;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.distributor-btn:hover{
+  background-color: #959393;
+  color: white;
+  border: 5px solid white;
+  scale: 0.8;
+}
+
+
 
 
 @keyframes slideDown {

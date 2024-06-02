@@ -105,32 +105,63 @@
                         </div>
                     </div>
                     <div class="text-center mt-4">
-                       <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img src="./assets/images/join_us/JOIN_US-02-removebg-preview.png" alt="new-distributor-logo"
-                        class="distributor w-50" style="filter: drop-shadow(2px 4px 6px #B1B1B1);"></a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img
+                                src="./assets/images/join_us/JOIN_US-02-removebg-preview.png" alt="new-distributor-logo"
+                                class="distributor w-50" style="filter: drop-shadow(2px 4px 6px #B1B1B1);"></a>
                     </div>
                 </div>
             </div>
         </section>
         <section class="existing-distributor-order-modal">
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog jost">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold" id="exampleModalLabel">EXISTING DISTRIBUTOR FORM</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body px-5">
+                            <form action="#"
+                                class="row justify-content-center existing-distributor-form py-5 rounded-pill">
+                                <div class="col-md-2 mb-3">
+                                    <select name="" id="primarySelect" class="form-select">
+                                        <option value="#" selected disabled>select product</option>
+                                        <option value="mustard">mustard oil</option>
+                                        <option value="soyabean">soyabean oil</option>
+                                        <option value="rice-bran">rice bran oil</option>
+                                        <option value="palm">palm oil</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <select name="" id="secondarySelect" class="form-select">
+                                        <option value="#" selected disabled>select item</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <input type="text" id="quantity" class="form-control" placeholder="Quantity">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <input type="text" id="unitPrice" class="form-control" placeholder="Unit Price" readonly>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <input type="text" id="amount" class="form-control" placeholder="Amout" readonly>
+                                </div>
+                                <div class="col-md-10 mt-5 text-end">
+                                    <button type="submit"
+                                        class="btn btn-danger text-white fw-bold shadow">SUBMIT</button>
+                                </div>
+                            </form>
+
+                            <div class="ditributor-for-button text-center">
+                                <a href="#" class="btn distributor-btn">DISTRIBUTOR FORM</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!-- footer start -->
@@ -179,8 +210,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <script src="./assets/js/index.js"></script>
+    <script>
+        $(document).ready(function () {
+            var products = {
+                "mustard": [
+                    { "item": "POUCH 1 L", "price": 10 },
+                    { "item": "POUCH 500 ml", "price": 5 },
+                    { "item": "PET BOTTLE 1 L", "price": 12 },
+                    { "item": "PET BOTTLE 500 ml", "price": 6 },
+                    { "item": "PET BOTTLE 200 ml", "price": 3 },
+                    { "item": "HDPE JAR 5 L", "price": 25 },
+                    { "item": "HDPE JAR 15 L / 15 Kg", "price": 50 },
+                    { "item": "TIN 15 Kg", "price": 100 }
+                ],
+                "soyabean": [
+                    { "item": "POUCH 1 L", "price": 11 },
+                    { "item": "POUCH 500 ml", "price": 6 },
+                    { "item": "PET BOTTLE 1 L", "price": 13 },
+                    { "item": "PET BOTTLE 500 ml", "price": 7 },
+                    { "item": "PET BOTTLE 200 ml", "price": 4 },
+                    { "item": "HDPE JAR 5 L", "price": 27 },
+                    { "item": "HDPE JAR 15 L / 15 Kg", "price": 55 },
+                    { "item": "TIN 15 Kg", "price": 110 }
+                ],
+                "rice-bran": [
+                    { "item": "POUCH 1 L", "price": 9 },
+                    { "item": "POUCH 500 ml", "price": 4 },
+                    { "item": "PET BOTTLE 1 L", "price": 11 },
+                    { "item": "PET BOTTLE 500 ml", "price": 5 },
+                    { "item": "PET BOTTLE 200 ml", "price": 3 },
+                    { "item": "HDPE JAR 5 L", "price": 23 },
+                    { "item": "HDPE JAR 15 L / 15 Kg", "price": 45 },
+                    { "item": "TIN 15 Kg", "price": 90 }
+                ],
+                "palm": [
+                    { "item": "POUCH 1 L", "price": 8 },
+                    { "item": "TIN 15 Kg", "price": 120 }
+                ]
+            };
+
+            $('#primarySelect').change(function () {
+                var selectedProduct = $(this).val();
+                var options = products[selectedProduct];
+                $('#secondarySelect').empty();
+                $('#secondarySelect').append($('<option>').text("select item"));
+                $.each(options, function (i, option) {
+                    $('#secondarySelect').append($('<option>').text(option.item));
+                });
+            });
+
+            $('#secondarySelect').change(function () {
+                var selectedItem = $(this).val();
+                var selectedProduct = $('#primarySelect').val();
+                var options = products[selectedProduct];
+                var selectedOption = options.find(option => option.item === selectedItem);
+                if (selectedOption) {
+                    $('#unitPrice').val(selectedOption.price);
+                    calculateAmount();
+                }
+            });
+
+            $('#quantity').on('input', function () {
+                calculateAmount();
+            });
+
+            function calculateAmount() {
+                var quantity = parseFloat($('#quantity').val());
+                var unitPrice = parseFloat($('#unitPrice').val());
+                var amount = isNaN(quantity) || isNaN(unitPrice) ? 0 : quantity * unitPrice;
+                $('#amount').val(amount.toFixed(2));
+            }
+        });
+
+    </script>
 </body>
 
 </html>
