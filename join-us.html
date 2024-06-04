@@ -92,7 +92,7 @@
                             <img src="./assets/images/join_us/arrow-down.png" alt="arrow-down"
                                 class="img-fluid arrow-down">
                             <div class="position-relative">
-                                <a href="#" class="action-btn">DOWNLOAD</a>
+                                <a href="#" id="downloadBrochure" class="action-btn">DOWNLOAD</a>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -100,7 +100,8 @@
                             <img src="./assets/images/join_us/arrow-down.png" alt="arrow-down"
                                 class="img-fluid arrow-down">
                             <div class="position-relative">
-                                <a href="#" class="action-btn">SUBMIT FORMS</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQkU1vRhtAKHlXFxaTbDIt3la5IUCFhJbdqUbePsVpoSbieA/viewform?usp=sf_link"
+                                    target="_blank" class="action-btn">SUBMIT FORMS</a>
                             </div>
                         </div>
                     </div>
@@ -143,7 +144,8 @@
                                     <input type="text" id="quantity" class="form-control" placeholder="Quantity">
                                 </div>
                                 <div class="col-md-2 mb-3">
-                                    <input type="text" id="unitPrice" class="form-control" placeholder="Unit Price" readonly>
+                                    <input type="text" id="unitPrice" class="form-control" placeholder="Unit Price"
+                                        readonly>
                                 </div>
                                 <div class="col-md-2 mb-3">
                                     <input type="text" id="amount" class="form-control" placeholder="Amout" readonly>
@@ -155,7 +157,8 @@
                             </form>
 
                             <div class="ditributor-for-button text-center">
-                                <a href="#" class="btn distributor-btn">DISTRIBUTOR FORM</a>
+                                <a href="#" id="downloadBtn"
+                                    class="btn distributor-btn">DISTRIBUTOR FORM</a>
                             </div>
                         </div>
                     </div>
@@ -196,6 +199,7 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="join-us.html">JOIN US</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -281,6 +285,41 @@
                 var amount = isNaN(quantity) || isNaN(unitPrice) ? 0 : quantity * unitPrice;
                 $('#amount').val(amount.toFixed(2));
             }
+
+            $('#downloadBtn').click(function () {
+                // Replace 'path/to/your/pdf/file.pdf' with the actual path to your PDF file
+                var pdfFilePath = './documents/Purchase Order Final 7.25 x 17.pdf';
+
+                // Creating a temporary anchor element
+                var link = $('<a href="' + pdfFilePath + '" download="Purchase Order.pdf"></a>');
+
+                // Appending the link to the body
+                $('body').append(link);
+
+                // Triggering the click event of the link
+                link[0].click();
+
+                // Removing the link from the body
+                $(link).remove();
+            });
+
+            $('#downloadBrochure').click(function () {
+                // Replace 'path/to/your/pdf/file.pdf' with the actual path to your PDF file
+                var pdfFilePath = './documents/BROCHURE.pdf';
+
+                // Creating a temporary anchor element
+                var link = $('<a href="' + pdfFilePath + '" download="BROCHURE.pdf"></a>');
+
+                // Appending the link to the body
+                $('body').append(link);
+
+                // Triggering the click event of the link
+                link[0].click();
+
+                // Removing the link from the body
+                $(link).remove();
+            });
+
         });
 
     </script>
